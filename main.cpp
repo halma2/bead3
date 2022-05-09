@@ -23,7 +23,7 @@ struct Ablak : public wingui{
 		new vector<string>({"elso","masodik","harmadik","negyedik","otodik","hatodik","hetedik"});
 	vector<string> * tomb2 = new vector<string>({"alma","korte","szilva"});*/
 
-    inputText * kijelzo;
+    //inputText * kijelzo;
 
 
 	Ablak(const int& xx, const int& yy):wingui(xx,yy) {
@@ -37,32 +37,15 @@ struct Ablak : public wingui{
 
         l1 = new lista(this,100,60,150,400,30,tomb1);
         l2 = new lista(this,420,60,150,400,30,tomb2);*/
-
-        kijelzo = new inputText(this, 700,200,300,40);
-    }
-
-    void egy(){
-
     }
 
 
-
-
-    /*void d12pakol(){
-    	if (l1->is_not_empty())
-			l2->paste(l1->cut());
-    }
-    void d21pakol(){
-    	if (l2->is_not_empty())
-			l1->paste(l2->cut());
-    }*/
-
-    virtual void kiiratas() override{
+    /*virtual void kiiratas() override{
 		ofstream f("ertekek.txt");
 		/*f << "s1: " << s1->getValue() << "\ns2: " << s2->getValue() <<
 		"\nl1: " << l1->getValue() << "\nl2: " << l2->getValue();*/
 		f.close();
-    }
+    }*/
 };
 
 int main()
