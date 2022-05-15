@@ -15,7 +15,7 @@ void pottytabla::draw(){
 				gout << color(50,255,50);
 			else
 				gout << color(255,255,255);
-			kor_rajz(_x+25+10+80*i, _y+50+60*j,200);
+			kor_rajz(_x+25+10+80*i, _y+50+60*(5-j),200);
 		}
 	}
 }
