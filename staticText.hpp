@@ -5,12 +5,12 @@
 
 class staticText : public Widget
 {
-    int keret = 3;
+    const int keret = 3;
     std::string _text = "";
     public:
         staticText(wingui * w, int x, int y, int sx, int sy, std::string it);
         virtual void draw();
-        virtual void handle(genv::event ev);
+        virtual void handle(genv::event ev){}
 
 };
 

@@ -14,7 +14,6 @@ public:
 		std::function<void()> lambd = [](){};
 		void action(){lambd();}
 		bool enabled;
-		std::string getLabel() {return _text;}
 };
 
 #endif // BUTTON_HPP
