@@ -138,12 +138,16 @@ struct Ablak : public wingui{
 
 	void lerakas(int hova){
 		for (int i = 0; i < 6; i++){
-			if (tabla[hova][i] == 0){//ha tele van, kell egy megtelt bool baj van
+			if (tabla[hova][i] == 0){
 				tabla[hova][i] = jatekos1_kore+1;
+				if (i == 5){
+					oszlopgombok->at(hova)->enabled = false;
+				}
 				break;
 			}
 		}
-		if (talalt_sorozat()){//if -> nyertjelenet
+
+		if (talalt_sorozat()){
 			jatekos_kore_jelzo->write("Jatekos" + to_string(jatekos1_kore+1) + " nyert!");
 			for (int i = 0; i < 7; i++){
 				oszlopgombok->at(i)->enabled = false;
