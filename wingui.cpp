@@ -3,7 +3,7 @@
 using namespace genv;
 
 wingui::wingui(const int& xx, const int& yy) : _xx(xx), _yy(yy){
-	gout.open(xx, yy);
+	gout.open(xx,yy);
 }
 
 void wingui::event_loop(){
@@ -31,4 +31,4 @@ void wingui::event_loop(){
             gout << refresh;
             gout << move_to(0,0) << color(0,0,0) << box(_xx, _yy);
         }
-    }
+}
