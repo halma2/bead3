@@ -1,0 +1,26 @@
+#include "plcheckbox.hpp"
+#include "graphics.hpp"
+using namespace genv;
+plcheckbox::plcheckbox(wingui * w, int x, int y, int sx, int sy) : Widget(w, x,y,sx,sy)
+{
+	_checked = false;
+}
+
+void plcheckbox::draw()
+{
+	gout << move_to(_x, _y) << color(255,255,255) << box(_size_x, _size_y) <<
+	move_to(_x+2, _y+2) << color(0,0,0) << box(_size_x-4, _size_y-4);
+	if(_checked){
+		gout << color(255,255,255) << move_to(_x+4, _y+4) << line(_size_x-8, _size_y-8)<<
+		move_to(_x+5, _y+4) << line(_size_x-8, _size_y-8) << move_to(_size_x+_x-4,_y+4) << line(-_size_x+8, _size_y-8) <<
+		move_to(_size_x+_x-5, _y+4) << line(-_size_x+8, _size_y-8);
+	}
+}
+
+void plcheckbox::handle(event ev){
+	if(ev.type == ev_mouse && is_selected(ev.pos_x, ev.pos_y) && ev.button == btn_left){
+		_checked = !_checked;
+	}
+}
+
+const bool plcheckbox::is_checked(){return _checked;}
