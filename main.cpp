@@ -42,7 +42,7 @@ struct Ablak : public wingui{
 
 
 		s1 = new staticText(this,40,30,120,30,"Jatekos1-piros");
-		s2 = new staticText(this,XX-120-40,30,120,30,"Jatekos2-zöld");
+		s2 = new staticText(this,XX-120-40,30,120,30,"Jatekos2-zï¿½ld");
 		pont1 = new inputText(this,45,80,40,30);
 		pont2 = new inputText(this,XX-90-40,80,40,30);
 		p1 = new staticText(this,90,80,40,30,"pont");
@@ -74,7 +74,7 @@ struct Ablak : public wingui{
 
     void kovi_kor(){
 		jatekos1_kore = !jatekos1_kore;
-		jatekos_kore_jelzo->write("Jatekos"+to_string(jatekos1_kore+1)+" köre");
+		jatekos_kore_jelzo->write("Jatekos"+to_string(jatekos1_kore+1)+" kï¿½re");
     }
 
     void elokeszites(){
@@ -196,7 +196,7 @@ struct Ablak : public wingui{
 			pont2->write(to_string(pontszam[1]));
 		}
 		else if (tele){
-			jatekos_kore_jelzo->write("Döntetlen!");
+			jatekos_kore_jelzo->write("Dï¿½ntetlen!");
 			for (int i = 0; i < 7; i++){
 				oszlopgombok->at(i)->enabled = false;
 				restartGomb->enabled = true;
