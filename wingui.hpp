@@ -8,6 +8,7 @@ class wingui
 protected:
 	const int _xx;
     std::vector<Widget*> widgets;
+
 public:
 	const int _yy;
 		wingui(const int& xx, const int& yy);

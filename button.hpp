@@ -13,7 +13,7 @@ public:
 		virtual void handle(genv::event ev);
 		std::function<void()> lambd = [](){};
 		void action(){lambd();}
-		std::string getLabel() {return _text;}
+		bool enabled;
 };
 
 #endif // BUTTON_HPP

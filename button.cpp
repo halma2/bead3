@@ -5,7 +5,10 @@ using namespace genv;
 
 #include <iostream>
 
-button::button(wingui * w, int x, int y, int sx, int sy, std::string text) : Widget(w, x,y,sx,sy), _text(text) {pressed = false;}
+button::button(wingui * w, int x, int y, int sx, int sy, std::string text) : Widget(w, x,y,sx,sy), _text(text) {
+	enabled = true;
+	pressed = false;
+}
 
 void button::draw(){
 	gout << move_to(_x, _y) << color(255,255,255) << box(_size_x, _size_y) <<
@@ -17,7 +20,7 @@ void button::draw(){
 }
 
 void button::handle(event ev){
-    if (abs(ev.button) == btn_left){
+    if (abs(ev.button) == btn_left && enabled){
         if (ev.button == btn_left && is_selected(ev.pos_x, ev.pos_y))
             pressed = true;
         else {
